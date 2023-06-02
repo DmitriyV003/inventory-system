@@ -11,10 +11,11 @@ return new class extends Migration {
             $table->id();
             $table->string('value');
             $table->unsignedBigInteger('attribute_id');
+
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('attribute_id')->references('attributes')->on('id');
+            $table->foreign('attribute_id')->references('id')->on('attributes');
         });
     }
 
