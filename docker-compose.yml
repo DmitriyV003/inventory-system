@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
     nginx:
-        image: nginx:1.17
+        image: nginx:latest
         ports:
             - "8000:80"
         volumes:
@@ -35,7 +35,7 @@ services:
         environment:
             COMPOSER_MEMORY_LIMIT: 4G
     mysql:
-        image: "mysql:5"
+        image: "mysql:latest"
         ports:
             - "33061:3306"
         volumes:
@@ -46,4 +46,4 @@ services:
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: supersecret
     redis:
-        image: redis:3.2.6
+        image: redis:latest

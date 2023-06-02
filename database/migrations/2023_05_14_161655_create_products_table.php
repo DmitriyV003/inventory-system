@@ -9,12 +9,13 @@ return new class extends Migration {
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('sale_price');
+            $table->unsignedBigInteger('sale_price');
             $table->unsignedBigInteger('unit_of_measure_id');
             $table->unsignedBigInteger('purchase_unit_of_measure_id');
             $table->boolean('can_be_sold');
             $table->boolean('can_be_purchased');
             $table->boolean('can_be_expensed');
+
             $table->softDeletes();
             $table->timestamps();
 
